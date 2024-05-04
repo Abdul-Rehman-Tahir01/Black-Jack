@@ -36,6 +36,12 @@ int main(){
             if ((bet==5) || (bet==10) || (bet==20) || (bet==50) || (bet==100) || (bet==200) || (bet==500) || (bet==1000)){
                 if(bet>your_account){
                     cout<<"\n\tSorry, you don't have enough money in your account."<<endl;
+                    if(your_account<5){
+                        Sleep(500);
+                        cout<<"\tQuitting the game!";
+                        Sleep(750);
+                        goto end;
+                    }
                     continue;
                 }
                 break;
@@ -667,4 +673,3 @@ void how_to_play(){
 
 
 }
-
